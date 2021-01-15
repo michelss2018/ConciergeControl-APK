@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+@font-face{
+    font-family: semiBoldMontserrat;
+    src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+
+/*******************************************************************/
+/* Configurações das últimas ocorrências */
+section#ocorrencias{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
+    font-family: semiBoldMontserrat;
+}
+
+section#ocorrencias h1{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    text-align: center;
+    font-size: 30pt;
+    color: rgb(255, 30, 0);
+}
+
+section#ocorrencias div#ultimasOcorrencias{
+    position: relative;
+    width: 98%;
+    height: auto;
+    margin: 4% 0 4% 0;
+    padding: 1%;
+    color: rgb(255, 255, 255);
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+section#ocorrencias div#ultimasOcorrencias div.containerOcorrencias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+    margin: 0 0 2% 0;
+}
+
+section#ocorrencias div#ultimasOcorrencias div.img{
+    margin: auto;
+}
+
+section#ocorrencias div#ultimasOcorrencias img{
+    width: 60px;
+    height: 60px;
+}
+
+section#ocorrencias div#ultimasOcorrencias div.titulo{
+    margin: auto;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+}
+
+section#ocorrencias div#ultimasOcorrencias div.descricao{
+    margin: auto;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+}
+
+section#ocorrencias div#ultimasOcorrencias div.data{
+    margin: auto;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+}
+
+section#ocorrencias div#ultimasOcorrencias button{
+    width: 150px;
+    height: 40px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to left, rgb(40, 0, 0), rgba(144, 0, 0, 1), rgb(255, 30, 0), rgba(144, 0, 0, 1), rgb(40, 0, 0));
+    outline: none;
+}
+
+section#ocorrencias div#ultimasOcorrencias button:hover{
+    box-shadow: 5px 5px 10px rgba(20, 20, 20, 0.5);
+}

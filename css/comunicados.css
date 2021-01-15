@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@font-face{
+    font-family: semiBoldMontserrat;
+    src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+/*******************************************************************/
+/* Configurações dos comunicados */
+section#comunicados{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
+    font-family: semiBoldMontserrat;
+}
+
+section#comunicados h1{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    text-align: center;
+    font-size: 30pt;
+    color: rgb(255, 30, 0);
+}
+
+section#comunicados div#comunicado div.containerComunicado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: auto;
+    margin: 2% 0;
+}
+
+section#comunicados div#comunicado div.titulo{
+    width: 480px;
+    height: auto;
+    margin: 0 5% 0 0;
+    padding: 2%;
+    background-image: linear-gradient(to left, rgb(255, 150, 10), rgb(144, 0, 0), rgb(40, 0, 0));
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+section#comunicados div#comunicado div.menssage{
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    text-align: justify;
+    color: rgb(170, 170, 170);
+}
+
+section#comunicados div#comunicado button{
+    width: 250px;
+    margin: auto auto auto 5%;
+    padding: 1%;
+    background-image: linear-gradient(to left, rgb(40, 0, 0), rgba(144, 0, 0, 1), rgb(255, 30, 0), rgba(144, 0, 0, 1), rgb(40, 0, 0));
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+section#comunicados div#comunicado button:hover{
+    box-shadow: 5px 5px 10px rgba(20, 20, 20, 0.5);
+}

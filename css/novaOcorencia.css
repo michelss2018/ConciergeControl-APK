@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: semiBoldItalicMontserrat;
+    src: url(../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf);
+}
+
+@font-face{
+    font-family: MontserratLight;
+    src: url(../fonts/Montserrat/Montserrat-Light.ttf);
+}
+
+@font-face{
+    font-family: semiBoldMontserrat;
+    src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: caveatRegular;
+    src: url(../fonts/Caveat/static/Caveat-Regular.ttf);
+}
+
+@font-face{
+    font-family: dancingScript;
+    src: url(../fonts/Dancing_Script/static/DancingScript-Regular.ttf);
+}
+
+@font-face{
+    font-family: ralewayBlack;
+    src: url(../fonts/Raleway/static/Raleway-Black.ttf);
+}
+
+div.linha{
+    width: 100%;
+    height: 5px;
+    margin: 1% 0 0 0;
+    background-image: linear-gradient(to left, rgb(40, 0, 0), rgba(144, 0, 0, 1), rgb(255, 30, 0), rgba(144, 0, 0, 1), rgb(40, 0, 0));
+}
+
+div.triangulo{
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    margin: 0 auto;
+    border-color: rgb(255, 30, 0) transparent  transparent;
+}
+
+/**********************************************************************/
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(40, 40, 40);
+}
+
+header#cabecalho{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/************* Main *************/
+main{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+main h1{
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 30pt;
+    font-family: semiBoldMontserrat;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+main h1 span{
+    color: rgb(255, 30, 0);
+    font-family: MontserratLight;
+    margin-right: 3%;
+}
+
+main section{
+    width: 75%;
+    height: auto;
+    margin: 3% auto;
+    padding: 1%;
+    background-color: rgb(35, 35, 35);
+}
+
+main section div.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+    margin: 1% 0;
+}
+
+main section div.containerTextarea{
+    width: 100%;
+    height: auto;
+    margin: 1% 0;
+    color: rgb(255, 255, 255);
+    font-family: semiBoldMontserrat;
+}
+
+main section select#nomeAgente{
+    width: 45%;
+    height: auto;
+    margin: auto auto auto 0;
+    padding: 1.5%;
+    font-size: 14pt;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 46, 46);
+    font-family: semiBoldMontserrat;
+}
+
+main section input#tituloOcorrencia{
+    width: 45%;
+    height: auto;
+    margin: auto 0 auto auto;
+    padding: 1.5%;
+    font-size: 14pt;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 46, 46);
+    text-transform: capitalize;
+    font-family: semiBoldMontserrat;
+}
+
+main section div.radio{
+    width: 25%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+main section div.radio label{
+    font-size: 14pt;
+    font-family: semiBoldMontserrat;
+}
+
+div.radio{
+    grid-area: radio;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.radio input{
+    margin-right: 1%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(35, 35, 35);
+    font-family: semiBoldMontserrat;
+}
+
+input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input#urgente[type='radio']:checked:after{
+    background-color: #ff0000;
+}
+
+input#atencao[type='radio']:checked:after{
+    background-color: #ffa500;
+}
+
+input#normal[type='radio']:checked:after{
+    background-color: #0ea300;
+}
+
+div.radio label{
+    padding-right: 5%;
+    color: rgb(255, 255, 255);
+}
+
+div.radio img{
+    width: 35px;
+    height: 35px;
+    padding-bottom: 1%;
+}
+
+
+main section div#divIcone{
+    width: 25%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+main section div#divIcone img{
+    width: 45px;
+    height: 45px;
+    margin: auto;
+}
+
+main section label{
+    font-size: 18pt;
+}
+
+main section textarea{
+    width: 98%;
+    height: auto;
+    margin: auto;
+    padding: 1%;
+    border: none;
+    outline: none;
+    font-size: 13pt;
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 46, 46);
+    font-family: semiBoldMontserrat;
+}
+
+div.imagens{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+    margin: 2% auto;
+    font-family: semiBoldMontserrat;
+}
+
+div.imagens img{
+    width: 100%;
+    height: 150px;
+    margin: auto;
+}
+
+div.imagens input{
+    width: 90%;
+    color: rgb(255, 255, 255);
+}
+
+div.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+    margin: 2% auto;
+}
+
+div.button button{
+    width: 180px;
+    height: 45px;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 13pt;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to left, rgb(104, 0, 0), rgb(184, 0, 0), rgb(255, 30, 0), rgba(184, 0, 0, 1), rgb(104, 0, 0));
+    cursor: pointer;
+    font-family: semiBoldMontserrat;
+}
+
+div.button button:hover{
+    box-shadow: 5px 5px 10px rgba(20, 20, 20, 0.5);
+}

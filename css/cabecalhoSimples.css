@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: semiBoldItalicMontserrat;
+    src: url(../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf);
+}
+
+@font-face{
+    font-family: semiBoldMontserrat;
+    src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: caveatRegular;
+    src: url(../fonts/Caveat/static/Caveat-Regular.ttf);
+}
+
+@font-face{
+    font-family: dancingScript;
+    src: url(../fonts/Dancing_Script/static/DancingScript-Regular.ttf);
+}
+
+@font-face{
+    font-family: ralewayBlack;
+    src: url(../fonts/Raleway/static/Raleway-Black.ttf);
+}
+
+div.linha{
+    width: 100%;
+    height: 5px;
+    margin: 1% 0 0 0;
+    background-image: linear-gradient(to left, rgb(40, 0, 0), rgba(144, 0, 0, 1), rgb(255, 30, 0), rgba(144, 0, 0, 1), rgb(40, 0, 0));
+}
+
+div.triangulo{
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    margin: 0 auto;
+    border-color: rgb(255, 30, 0) transparent  transparent;
+}
+
+/**********************************************************************/
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(40, 40, 40);
+}
+
+header#cabecalho{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+header#cabecalho h1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    width: 30%;
+    height: auto;
+    font-size: 35pt;
+    font-family: ralewayBlack;
+    color: rgb(255, 30, 0);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Div usuário */
+div#usuario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 1%;
+}
+
+div#usuario div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+div#usuario div img{
+    width: 45px;
+    height: auto;
+    margin: auto 1% auto auto;
+}
+
+p#nome{
+    font-size: 20pt;
+    color: rgb(255, 30, 0);
+    font-family: semiBoldMontserrat;
+    margin: auto auto auto 1%;
+}
+
+p#funcao{
+    font-size: 15pt;
+    color: rgb(40, 40, 40);
+    font-family: semiBoldMontserrat;
+    margin: auto auto auto 1%;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: rgb(255, 30, 0);
+}
+
+div#usuario div#foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: auto;
+}
+
+div#foto figure{
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgb(255, 30, 0);
+    border-radius: 100%;
+}
+
+div#foto figure img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+div#dataHora div.data p#data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20pt;
+    color: rgb(255, 30, 0);
+    font-family: semiBoldMontserrat;
+    margin: auto auto auto 1%;
+}
+
+div#dataHora div.data img{
+  width: 35px;
+  height: auto;
+  margin: auto 1% auto auto;
+}
+
+div#dataHora div.hora p#hora{
+    width: 150px;
+    height: auto;
+    text-align: left;
+    font-size: 20pt;
+    color: rgb(255, 30, 0);
+    font-family: semiBoldMontserrat;
+    margin: auto auto auto 1%;
+}
+
+div#dataHora div.hora img{
+    width: 35px;
+    height: auto;
+    margin: auto 1% auto auto;
+  }
+

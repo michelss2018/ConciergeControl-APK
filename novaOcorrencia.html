@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Ocorrência</title>
+
+    <link rel="stylesheet" href="css/cabecalhoSimples.css">
+    <link rel="stylesheet" href="css/novaOcorencia.css">
+
+    <script src="js/dataHora.js"></script>
+</head>
+<body onload="carregaData(), startTime()">
+
+    <header id="cabecalho">
+
+        <div id="usuario">
+
+            <div id="nomeFuncao">
+                <img src="img/porteiro.png" alt="">
+                <p id="funcao">Porteiro</p>
+                <p id="nome">Nome Completo do Agente</p>
+                
+            </div>
+
+            <div id="foto">
+                <figure>
+                    <img src="img/foto.png" alt="">
+                </figure>
+            </div>
+            
+            <div id="dataHora">
+                <div class="data">
+                    <img src="img/calendario.png" alt="calendario">
+                    <p id="data">01/01/2020</p>
+                </div> 
+                <div class="hora"> 
+                    <img src="img/hora.png" alt="">
+                    <p id="hora">08:00:01h</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="linha"></div>
+        <div class="triangulo"></div>
+    </header>
+
+    <main>
+        <h1><span>Concierge Control</span>Nova Ocorrência</h1>
+
+        <section>
+
+            <form action="" name="novaOcorrencia" id="novaOcorrencia">
+    
+                <div class="container">
+
+                        <select name="nomeAgente" id="nomeAgente">
+                            <option value="Nome do Agente">Nome do Agente</option>
+                            <option value="Agente1">Agente1</option>
+                            <option value="Agente2">Agente2</option>
+                            <option value="Agente3">Agente3</option>
+                        </select>
+        
+                        <input type="text" name="tituloOcorrencia" id="tituloOcorrencia" placeholder="Título da ocorrência">
+
+                </div>
+    
+                <div class="container">
+                    <div class="radio">
+                        <input type="radio" name="grau" id="urgente" onclick="img01()">
+                    <label for="urgente">Urgente</label>
+                    </div>
+    
+                    <div class="radio">
+                        <input type="radio" name="grau" id="atencao" onclick="img02()">
+                    <label for="atencao">Atenção</label>
+                    </div>
+    
+                    <div class="radio">
+                        <input type="radio" name="grau" id="normal" onclick="img03()" checked>
+                    <label for="normal">Normal</label>
+                    </div>
+    
+                    <div id="divIcone">
+                        <img id="icone" src="img/ocorrenciaVerde.png" alt="ícone_pouco_urgente">
+                    </div>
+                </div>
+
+                   <div class="containerTextarea">
+                    <label for="descricao">Descrição:</label></br>
+                    <textarea name="descricao" id="descricao" cols="30" rows="5"
+                        placeholder="Descreva a ocorrência..."></textarea>
+                   </div>
+    
+                   <div class="imagens">
+                    <div class="app" id="image1">
+                        <img id="uploadPreview1"/>
+                        <input id="uploadImage1" type="file" name="myPhoto" onchange="PreviewImage1();" />
+                    </div>
+    
+                    <div class="app" id="image2">
+                        <img id="uploadPreview2"/>
+                        <input id="uploadImage2" type="file" name="myPhoto" onchange="PreviewImage2();" />
+                    </div>
+    
+                    <div class="app" id="image3">
+                        <img id="uploadPreview3"/>
+                        <input id="uploadImage3" type="file" name="myPhoto" onchange="PreviewImage3();" />
+                    </div>
+                </div>
+    
+                <div class="button">
+                    <button class="adcionar" type="reset" onclick="Adicionar()">Adicionar</button>
+                    <button type="reset">Limpar</button>
+                    <button type="reset" onclick="closedNovaOcorrencia()">Fechar</button>
+                </div>
+            </form>
+    
+        </section>
+    
+        <section id="log">
+        
+            <table id="tblCadastro">         
+                <tbody>
+                  
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+</body>
+</html>

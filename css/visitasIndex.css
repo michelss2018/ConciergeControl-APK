@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@font-face{
+    font-family: semiBoldMontserrat;
+    src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: bolderMontserrat;
+    src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+/*******************************************************************/
+/* Configurações das entregas pendentes */
+section#visitas{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 5% auto;
+    font-family: semiBoldMontserrat;
+}
+
+section#visitas h1{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 30pt;
+    color: rgb(255, 30, 0);
+}
+
+div#visitasAtivas{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
+}
+
+div#visitasAtivas table{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+div#visitasAtivas th{
+    padding: 1%;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+div#visitasAtivas td{
+    padding: 1%;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(61, 61, 61, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+div#visitasAtivas button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: bolderMontserrat;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to left, rgb(40, 0, 0), rgba(144, 0, 0, 1), rgb(255, 30, 0), rgba(144, 0, 0, 1), rgb(40, 0, 0));
+}
+
+div#visitasAtivas button:hover{
+    box-shadow: 5px 5px 10px rgba(20, 20, 20, 0.5);
+}
+
+section#visitas div.container{
+    display: flex;
+    align-items: initial;
+    justify-content: space-between;
+}
+
+section#visitas div.container div{
+    width: 47%;
+    height: auto;
+    margin: 0 auto auto auto;
+}
+
+section#visitas div.container div table{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
+
+section#visitas div.container div table th{
+    padding: 1%;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+section#visitas div.container div table td{
+    padding: 1%;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(61, 61, 61, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}

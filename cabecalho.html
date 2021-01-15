@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/atalhos.css">
+
+    <script src="js/script.js"></script>
+    <script src="js/dataHora.js"></script>
+    <script src="js/finalizandoPlantão.js"></script>
+    
+</head>
+<body onload="carregaData(), startTime()">
+    <header id="cabecalho">
+
+        <div class="container">
+            <figure id="logo">
+                <img src="img/CC.png" alt="Logo" title="Logo Concierge Control">
+            </figure>
+    
+            <h1 id="portaria">Bella Praia II</h1>
+    
+            <figure id="menu">
+                <div>
+                    <img src="img/regimento.png" alt="regimento" id="regimento" title="Regimento">
+                    <img src="img/regimento01.png" alt="regimento01" id="regimento01" title="Regimento">
+                </div>
+                
+                <div>
+                    <img src="img/manual.png" alt="manual" id="manual" title="Manual">
+                    <img src="img/manual01.png" alt="manual01" id="manual01" title="Manual">
+                </div>
+    
+                <div id="msg">
+                    <img src="img/e-mail.png" alt="" id="email" title="E-mail">
+                    <img src="img/e-mail01.png" alt="" id="email01" title="E-mail">
+                </div>
+                
+                <div id="login">
+                    <img src="img/login00.png" alt="login" id="login00" title="Login/Logout" onclick="abreLogin()">
+                    <img src="img/login01.png" alt="login" id="login01" title="Login/Logout" onclick="abreLogin()">
+                </div>
+
+            </figure>
+        </div>
+
+        <div class="linha"></div>
+        <div class="triangulo"></div>
+
+        <div id="usuario">
+            <div id="nomeFuncao">
+                <img src="img/porteiro.png" alt="">
+                <p id="funcao">Porteiro</p>
+                <p id="nome">Nome Completo do Agente</p>
+                
+            </div>
+            <div id="foto">
+                <figure>
+                    <img src="img/foto.png" alt="">
+                </figure>
+            </div>
+            <div id="dataHora">
+                <div class="data">
+                    <img src="img/calendario.png" alt="calendario">
+                    <p id="data">01/01/2020</p>
+                </div> 
+                <div class="hora"> 
+                    <img src="img/hora.png" alt="">
+                    <p id="hora">08:00:01h</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="menuPrincipal">
+            <div class="img" title="Ocorrências" onclick="openOcorrencias()">
+                <img src="img/ocorrencia.png" alt="Ocorrências">
+            </div>
+
+            <div class="img" title="Correspondências" onclick="openCorreios()">
+                <img src="img/mail.png" alt="">
+            </div>
+
+            <div class="img" title="Visitas" onclick="openVisitas()">
+                <img src="img/visits.png" alt="">
+            </div>
+
+            <div class="img" title="Material do Posto" onclick="openMaterial()">
+                <img src="img/material.png" alt="">
+            </div>
+
+            <div class="img" title="Chaves" onclick="openChaves()">
+                <img src="img/chaves.png" alt="">
+            </div>
+
+            <div class="img" title="Reservas" onclick="openReservas()">
+                <img src="img/reservas.png" alt="">
+            </div>
+
+            <div class="img" title="Apartamentos" onclick="openApartamentos()">
+                <img src="img/apartamentos.png" alt="">
+            </div>
+
+            <div class="img" title="Veículos" onclick="openVeiculos()">
+                <img src="img/veiculos.png" alt="">
+            </div>
+
+            <div class="img" title="Multas" onclick="openMultas()">
+                <img src="img/multas.png" alt="">
+            </div>
+        </div>
+
+        <div id="atalhos">
+            <button>Abrir Ocorrência</button>
+            <button>Fazer Comunicado</button>
+            <button>Saída de Material</button>
+            <button>Relatórios</button>
+            <button class="finalizarPlantao" onclick="finalizaPlantao()">Finalizar Plantão</button>
+        </div>
+
+    </header>
+</body>
+</html>

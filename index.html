@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concierge Control</title>
+
+    <link rel="shortcut icon" href="img/CC-icon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/correiosIndex.css">
+    <link rel="stylesheet" href="css/comunicados.css">
+    <link rel="stylesheet" href="css/ocorrenciasIndex.css">
+    <link rel="stylesheet" href="css/atalhos.css">
+    <link rel="stylesheet" href="css/visitasIndex.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="js/script.js"></script>
+    <script src="js/dataHora.js"></script>
+    <script src="js/finalizandoPlantão.js"></script>
+    <script src="js/carregaCabecalho.js"></script>
+    <script src="js/open.js"></script>
+
+</head>
+<body onload="carregaData(), startTime(), carregaCabecalho()">
+
+    <header id="cabecalho">
+        <div class="container">
+            <figure id="logo">
+                <img src="img/CC.png" alt="Logo" title="Logo Concierge Control">
+            </figure>
+    
+            <h1 id="portaria">Bella Praia II</h1>
+    
+            <figure id="menu">
+                <div>
+                    <img src="img/regimento.png" alt="regimento" id="regimento" title="Regimento">
+                    <img src="img/regimento01.png" alt="regimento01" id="regimento01" title="Regimento">
+                </div>
+                
+                <div>
+                    <img src="img/manual.png" alt="manual" id="manual" title="Manual">
+                    <img src="img/manual01.png" alt="manual01" id="manual01" title="Manual">
+                </div>
+    
+                <div id="msg">
+                    <img src="img/e-mail.png" alt="" id="email" title="E-mail">
+                    <img src="img/e-mail01.png" alt="" id="email01" title="E-mail">
+                </div>
+                
+                <div id="login">
+                    <img src="img/login00.png" alt="login" id="login00" title="Login/Logout" onclick="abreLogin()">
+                    <img src="img/login01.png" alt="login" id="login01" title="Login/Logout" onclick="abreLogin()">
+                </div>
+
+            </figure>
+        </div>
+
+        <div class="linha"></div>
+        <div class="triangulo"></div>
+
+        <div id="usuario">
+            <div id="nomeFuncao">
+                <img src="img/porteiro.png" alt="">
+                <p id="funcao">Porteiro</p>
+                <p id="nome">Nome Completo do Agente</p>
+                
+            </div>
+            <div id="foto">
+                <figure>
+                    <img src="img/foto.png" alt="">
+                </figure>
+            </div>
+            <div id="dataHora">
+                <div class="data">
+                    <img src="img/calendario.png" alt="calendario">
+                    <p id="data">01/01/2020</p>
+                </div> 
+                <div class="hora"> 
+                    <img src="img/hora.png" alt="">
+                    <p id="hora">08:00:01h</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="menuPrincipal">
+            <div class="img" title="Ocorrências" onclick="openOcorrencias()">
+                <img src="img/ocorrencia.png" alt="Ocorrências">
+            </div>
+
+            <div class="img" title="Correspondências" onclick="openCorreios()">
+                <img src="img/mail.png" alt="">
+            </div>
+
+            <div class="img" title="Visitas" onclick="openVisitas()">
+                <img src="img/visits.png" alt="">
+            </div>
+
+            <div class="img" title="Material do Posto" onclick="openMaterial()">
+                <img src="img/material.png" alt="">
+            </div>
+
+            <div class="img" title="Chaves" onclick="openChaves()">
+                <img src="img/chaves.png" alt="">
+            </div>
+
+            <div class="img" title="Reservas" onclick="openReservas()">
+                <img src="img/reservas.png" alt="">
+            </div>
+
+            <div class="img" title="Apartamentos" onclick="openApartamentos()">
+                <img src="img/apartamentos.png" alt="">
+            </div>
+
+            <div class="img" title="Veículos" onclick="openVeiculos()">
+                <img src="img/veiculos.png" alt="">
+            </div>
+
+            <div class="img" title="Multas" onclick="openMultas()">
+                <img src="img/multas.png" alt="">
+            </div>
+        </div>
+
+        <div id="atalhos">
+            <button onclick="openNovaOcorrencia()">Nova Ocorrência</button>
+            <button>Fazer Comunicado</button>
+            <button>Saída de Material</button>
+            <button>Relatórios</button>
+            <button class="finalizarPlantao" onclick="finalizaPlantao()">Finalizar Plantão</button>
+        </div>
+    </header>
+
+    <main>                                                                                                                                                                                                                                 
+                                                                                                                                                                                                 
+        <section id="correios">
+
+            <h1 onclick="carregaCabecalho()">Entregas Pendentes</h1>
+
+            <div id="entregasPendentes">
+                <table>
+                    <tr>
+                        <th>Data Chegada</th>
+                        <th>Bloco</th>
+                        <th>Apartamento</th>
+                        <th>Código de Rastreio</th>
+                        <th>Pg. Protocolo</th>
+                        <th>Tipo</th>
+                    </tr>
+
+                    <tr>
+                        <td>07/08/2020 - 08:00h</td>
+                        <td>05</td>
+                        <td>304</td>
+                        <td>123456789-BR</td>
+                        <td>Pg. 28</td>
+                        <td>Caixa</td>
+                        <td><button class="displayBlock" type="button"><img src="img/entregar.png" alt=""></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>07/08/2020 - 08:00h</td>
+                        <td>05</td>
+                        <td>304</td>
+                        <td>123456789-BR</td>
+                        <td>Pg. 28</td>
+                        <td>Caixa</td>
+                        <td><button class="displayBlock" type="button"><img src="img/entregar.png" alt=""></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>07/08/2020 - 08:00h</td>
+                        <td>05</td>
+                        <td>304</td>
+                        <td>123456789-BR</td>
+                        <td>Pg. 28</td>
+                        <td>Caixa</td>
+                        <td><button class="displayBlock" type="button"><img src="img/entregar.png" alt=""></button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container">
+                <div id="recebidas">
+
+                    <h1>Recebidas</h1>
+
+                    <table>
+                        <tr>
+                            <th>Data</th>
+                            <th>Bl</th>
+                            <th>Ap</th>
+                            <th>Rastreio</th>
+                            <th>Pg</th>
+                            <th>Tipo</th>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>123456789-BR</td>
+                            <td>28</td>
+                            <td>Caixa</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>123456789-BR</td>
+                            <td>28</td>
+                            <td>Caixa</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>123456789-BR</td>
+                            <td>28</td>
+                            <td>Caixa</td>
+                        </tr>
+
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>123456789-BR</td>
+                            <td>28</td>
+                            <td>Caixa</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>123456789-BR</td>
+                            <td>28</td>
+                            <td>Caixa</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="entregues">
+
+                    <h1>Entregues</h1>
+
+                    <table>
+                        <tr>
+                            <th>Data</th>
+                            <th>Bl</th>
+                            <th>Ap</th>
+                            <th>Rastreio</th>
+                            <th>Pg</th>
+                            <th>Tipo</th>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>123456789-BR</td>
+                            <td>28</td>
+                            <td>Caixa</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>123456789-BR</td>
+                            <td>28</td>
+                            <td>Caixa</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>123456789-BR</td>
+                            <td>28</td>
+                            <td>Caixa</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="comunicados">
+
+            <h1>Comunicados</h1>
+
+                        <div id="comunicado">
+
+                            <div class="containerComunicado">
+                                <div class="titulo">Título do Comunicado</div>
+                                <div class="menssage">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum,
+                                    id totam
+                                    obcaecati neque odio perspiciatis corporis? Facere ipsa, quis facilis vel rem natus
+                                    blanditiis, repellendus dolore dolorem minus eligendi vero!</div>
+
+                                <button class="displayBlock" type="button">Ver mais</button>
+                            </div>
+
+                            <div class="containerComunicado">
+                                <div class="titulo">Título do Comunicado</div>
+                                <div class="menssage">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum,
+                                    id totam
+                                    obcaecati neque odio perspiciatis corporis? Facere ipsa, quis facilis vel rem natus
+                                    blanditiis, repellendus dolore dolorem minus eligendi vero!</div>
+
+                                <button class="displayBlock" type="button">Ver mais</button>
+                            </div>
+
+                            <div class="containerComunicado">
+                                <div class="titulo">Título do Comunicado</div>
+                                <div class="menssage">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum,
+                                    id totam
+                                    obcaecati neque odio perspiciatis corporis? Facere ipsa, quis facilis vel rem natus
+                                    blanditiis, repellendus dolore dolorem minus eligendi vero!</div>
+
+                                <button class="displayBlock" type="button">Ver mais</button>
+                            </div>
+
+                        </div>
+
+        </section>
+
+        <section id="visitas">
+
+            <h1>Visitas Ativas</h1>
+
+            <div id="visitasAtivas">
+                <table>
+                    <tr>
+                        <th>Chegada</th>
+                        <th>Bloco</th>
+                        <th>Apartamento</th>
+                        <th>Visitante</th>
+                        <th>Veículo</th>
+                        <th>Placa</th>
+                    </tr>
+
+                    <tr>
+                        <td>07/08/2020 - 08:00h</td>
+                        <td>05</td>
+                        <td>304</td>
+                        <td>Nome do Visitante</td>
+                        <td>Moto</td>
+                        <td>ABC-1234</td>
+                        <td><button>🕓</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>07/08/2020 - 08:00h</td>
+                        <td>05</td>
+                        <td>304</td>
+                        <td>Nome do Visitante</td>
+                        <td>Moto</td>
+                        <td>ABC-1234</td>
+                        <td><button>🕓</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>07/08/2020 - 08:00h</td>
+                        <td>05</td>
+                        <td>304</td>
+                        <td>Nome do Visitante</td>
+                        <td>Moto</td>
+                        <td>ABC-1234</td>
+                        <td><button>🕓</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container">
+                <div id="chegadas">
+
+                    <h1>Chegadas</h1>
+
+                    <table>
+                        <tr>
+                            <th>Chegada</th>
+                            <th>Bl</th>
+                            <th>Ap</th>
+                            <th>Visitante</th>
+                            <th>Veículo</th>
+                            <th>Placa</th>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>Nome do Visitante</td>
+                            <td>Moto</td>
+                            <td>ABC-1234</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>Nome do Visitante</td>
+                            <td>Moto</td>
+                            <td>ABC-1234</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>Nome do Visitante</td>
+                            <td>Moto</td>
+                            <td>ABC-1234</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="saídas">
+
+                    <h1>Saídas</h1>
+
+                    <table>
+                        <tr>
+                            <th>Chegada</th>
+                            <th>Bl</th>
+                            <th>Ap</th>
+                            <th>Visitante</th>
+                            <th>Veículo</th>
+                            <th>Placa</th>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>Nome do Visitante</td>
+                            <td>Moto</td>
+                            <td>ABC-1234</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>Nome do Visitante</td>
+                            <td>Moto</td>
+                            <td>ABC-1234</td>
+                        </tr>
+    
+                        <tr>
+                            <td>07/08/2020 - 08:00h</td>
+                            <td>05</td>
+                            <td>304</td>
+                            <td>Nome do Visitante</td>
+                            <td>Moto</td>
+                            <td>ABC-1234</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="ocorrencias">
+
+            <h1>Últimas Ocorrências</h1>
+
+            <div id="ultimasOcorrencias">
+
+                <div class="containerOcorrencias">
+                    <div class="img">
+                        <img src="img/ocorrenciaAmarelo.png" alt="">
+                    </div>
+                    <div class="titulo">
+                        Ocorrência de Média Urgência
+                    </div>
+                    <div class="descricao">
+                        Breve descrição da Ocorrencia...
+                    </div>
+                    <div class="data">
+                        05/08/2020
+                    </div>
+                    <button class="displayBlock" type="button">Ver</button>
+                </div>
+
+                <div class="containerOcorrencias">
+                    <div class="img">
+                        <img src="img/ocorrenciaVermelho.png" alt="">
+                    </div>
+                    <div class="titulo">
+                        Ocorrência de Grande Urgência
+                    </div>
+                    <div class="descricao">
+                        Breve descrição da Ocorrencia...
+                    </div>
+                    <div class="data">
+                        05/08/2020
+                    </div>
+                    <button class="displayBlock" type="button">Ver</button>
+                </div>
+
+                <div class="containerOcorrencias">
+                    <div class="img">
+                        <img src="img/ocorrenciaVerde.png" alt="">
+                    </div>
+                    <div class="titulo">
+                        Ocorrência de Pouca Urgência
+                    </div>
+                    <div class="descricao">
+                        Breve descrição da Ocorrencia...
+                    </div>
+                    <div class="data">
+                        05/08/2020
+                    </div>
+                    <button class="displayBlock" type="button">Ver</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <section id="telaLogin">
+        <form action="">
+            <div class="all">
+            <div class="data">
+                <input type="text" name="nameLogin" id="nameLogin" placeholder="Login">
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="buttons">
+                <button type="reset">Clear</button>
+                <button type="button" onclick="fechaLogin()">Cancel</button>
+                <button type="button" onclick="logando()">Enter</button>
+            </div>
+        </div>
+        </form>
+    </section>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
